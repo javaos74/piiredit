@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="985,2334" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p2="http://schemas.uipath.com/workflow/activities/documentunderstanding-ml" xmlns:p3="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:p4="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p5="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p6="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiaam="clr-namespace:UiPath.IntelligentOCR.Activities.Actions.Model;assembly=UiPath.IntelligentOCR.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="962,4467" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p2="http://schemas.uipath.com/workflow/activities/documentunderstanding-ml" xmlns:p3="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:p4="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p5="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p6="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiaam="clr-namespace:UiPath.IntelligentOCR.Activities.Actions.Model;assembly=UiPath.IntelligentOCR.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="46">
+    <scg:List x:TypeArguments="x:String" Capacity="48">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -47,10 +47,12 @@
       <x:String>UiPath.IntelligentOCR.Activities.ValidationStation</x:String>
       <x:String>UiPath.IntelligentOCR.Activities.Actions.Model</x:String>
       <x:String>UiPath.IntelligentOCR.Activities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System.Xml.Serialization</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="58">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="37">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -86,20 +88,22 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.IntelligentOCR</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="640,2269" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence sap2010:Annotation.AnnotationText="DU에서 필드를 찾았을때 해당 필드의 자표를 구하는 방법입니다. &#xD;&#xA;&#xD;&#xA;구글OCR엔진 키와 Cloud DU Key는 별도로 구성해야 합니다. &#xD;&#xA;&#xD;&#xA;테이블 필드의 경우 추출하는 내용을 주석을 추가했으니 확인해보세요.&#xD;&#xA;" sap:VirtualizedContainerService.HintSize="830,4362" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
       <Variable x:TypeArguments="p6:DocumentTaxonomy" Name="my_taxonomy" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <p:LoadTaxonomy DisplayName="Load Taxonomy" sap:VirtualizedContainerService.HintSize="598,105" sap2010:WorkflowViewState.IdRef="LoadTaxonomy_1" Taxonomy="[my_taxonomy]" />
-    <Sequence DisplayName="For Each File in Folder" sap:VirtualizedContainerService.HintSize="598,2032" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <p:LoadTaxonomy DisplayName="Load Taxonomy" sap:VirtualizedContainerService.HintSize="788,105" sap2010:WorkflowViewState.IdRef="LoadTaxonomy_1" Taxonomy="[my_taxonomy]" />
+    <Sequence DisplayName="For Each File in Folder" sap:VirtualizedContainerService.HintSize="788,4017" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="selectFolder" />
         <Variable x:TypeArguments="s:String[]" Name="files" />
@@ -109,9 +113,28 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="556,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Choose korean receipts folder&quot;]" />
-      <ui:SelectFolder DisplayName="Select folder" sap:VirtualizedContainerService.HintSize="556,79" sap2010:WorkflowViewState.IdRef="SelectFolder_1" SelectedFolder="[selectFolder]" />
-      <Assign sap:VirtualizedContainerService.HintSize="556,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="746,374" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="376,296" sap2010:WorkflowViewState.IdRef="Sequence_13">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Choose korean receipts folder&quot;]" />
+            <ui:SelectFolder DisplayName="Select folder" sap:VirtualizedContainerService.HintSize="334,79" sap2010:WorkflowViewState.IdRef="SelectFolder_1" SelectedFolder="[selectFolder]" />
+          </Sequence>
+        </ui:CommentOut.Body>
+      </ui:CommentOut>
+      <Assign sap:VirtualizedContainerService.HintSize="746,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[selectFolder]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">C:\Users\charles\Downloads\한글영수증</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="746,60" sap2010:WorkflowViewState.IdRef="Assign_1">
         <Assign.To>
           <OutArgument x:TypeArguments="s:String[]">[files]</OutArgument>
         </Assign.To>
@@ -119,44 +142,56 @@
           <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles(selectFolder)]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For each file" sap:VirtualizedContainerService.HintSize="556,1596" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[files]">
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For each file" sap:VirtualizedContainerService.HintSize="746,3311" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[files]">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="x:String">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:String" Name="file" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="520,1471" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="710,3186" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="du_text" />
                 <Variable x:TypeArguments="p5:Document" Name="du_dom" />
-                <Variable x:TypeArguments="x:String" Name="apikey">
-                  <Variable.Default>
-                    <Literal x:TypeArguments="x:String">JB1Ou9qoXzuQLcY1qzIHIdAKY/038Ftia84Yc/peThl5LuYMkY88Wf0tCDr2uDfn0mevWbV6H390wyspczYi5Q==</Literal>
-                  </Variable.Default>
-                </Variable>
+                <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="cloud.uipath.com 에서 값을 찾아서 넣으셔야 합니다. " Default="JB1Ou9qoXzuQLcY1qzIHIdAKY/038Ftia84Yc/peThl5LuYMkY88Wf0tCDr2uDfn0mevWbV6H390wyspczYi5Q==" Name="apikey" />
                 <Variable x:TypeArguments="p4:ExtractionResult" Name="extraction_result" />
                 <Variable x:TypeArguments="x:String" Name="name" />
                 <Variable x:TypeArguments="x:Int32" Name="total" />
                 <Variable x:TypeArguments="x:String" Name="receipt_date" />
                 <Variable x:TypeArguments="p4:ExtractionResult" Name="validated_result" />
                 <Variable x:TypeArguments="uiaam:DocumentValidationActionData" Name="action_result" />
+                <Variable x:TypeArguments="p:Box" Name="boxes" />
+                <Variable x:TypeArguments="p4:ResultsValueTokens" Name="tokens" />
+                <Variable x:TypeArguments="p4:ResultsValue" Name="result_value" />
+                <Variable x:TypeArguments="p4:ResultsDataPoint[]" Name="result_data_points" />
+                <Variable x:TypeArguments="scg:IEnumerable(p4:ResultsDataPoint)" Name="table_body_enums" />
               </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <p:DigitizeDocument DegreeOfParallelism="-1" DisplayName="Digitize Document" DocumentObjectModel="[du_dom]" DocumentPath="[file]" DocumentText="[du_text]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="478,298" sap2010:WorkflowViewState.IdRef="DigitizeDocument_1">
+              <p:DigitizeDocument DegreeOfParallelism="-1" DisplayName="Digitize Document" DocumentObjectModel="[du_dom]" DocumentPath="[file]" DocumentText="[du_text]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="668,342" sap2010:WorkflowViewState.IdRef="DigitizeDocument_1">
                 <p:DigitizeDocument.OCREngine>
                   <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
                     <ActivityFunc.Argument>
                       <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
                     </ActivityFunc.Argument>
-                    <ui:GoogleCloudOCR FilterRegion="{x:Null}" Language="{x:Null}" Output="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" Text="{x:Null}" ApiKey="AIzaSyAabCimm0BJ1zRp_KN7DIpmCqTt3WAjCCY" ComputeSkewAngle="False" DetectionMode="TextDetection" DisplayName="Google Cloud Vision OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="312,22" sap2010:WorkflowViewState.IdRef="GoogleCloudOCR_1" Image="[Image]" ResizeToApiLimits="False" />
+                    <ui:GoogleCloudOCR FilterRegion="{x:Null}" Language="{x:Null}" Output="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" Text="{x:Null}" sap2010:Annotation.AnnotationText="OCR API키는 넣으셔야 합니다. " ComputeSkewAngle="False" DetectionMode="TextDetection" DisplayName="Google Cloud Vision OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="312,66" sap2010:WorkflowViewState.IdRef="GoogleCloudOCR_1" Image="[Image]" ResizeToApiLimits="False">
+                      <ui:GoogleCloudOCR.ApiKey>
+                        <InArgument x:TypeArguments="x:String">
+                          <Literal x:TypeArguments="x:String" Value="" />
+                        </InArgument>
+                      </ui:GoogleCloudOCR.ApiKey>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:GoogleCloudOCR>
                   </ActivityFunc>
                 </p:DigitizeDocument.OCREngine>
               </p:DigitizeDocument>
-              <p1:DataExtractionScope ClassificationResult="{x:Null}" DisplayName="Data Extraction Scope" DocumentObjectModel="[du_dom]" DocumentPath="[file]" DocumentText="[du_text]" DocumentTypeId="lguplus.nw.receipt" ExtractionResult="[extraction_result]" FormatValuesIfPossible="True" sap:VirtualizedContainerService.HintSize="478,522" sap2010:WorkflowViewState.IdRef="DataExtractionScope_1" Taxonomy="[my_taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI9da8a45e84274bdf893d45d452f4e4d0&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;lguplus.nw.receipt&quot;:{&quot;FieldMappings&quot;:{&quot;lguplus.nw.receipt.name&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.name&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.vendor-addr&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.vendor-addr&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;vendor-addr\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.phone&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.phone&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;phone\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.total&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.total&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;total\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.tax&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.tax&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;tax\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.biz-lic-no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.biz-lic-no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;biz-lic-no\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.currency&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.currency&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;currency\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;items\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.items.description&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.items.description&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;description\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.items.quantity&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.items.quantity&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;quantity\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.items.unit-price&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.items.unit-price&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;unit-price\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.items.line-amount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.items.line-amount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;line-amount\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;}}}},&quot;ExtractorMinimumConfidence&quot;:{&quot;UI9da8a45e84274bdf893d45d452f4e4d0&quot;:&quot;0&quot;},&quot;ExtractorsAliases&quot;:{},&quot;DocumentTypeOptionsByExtractor&quot;:{&quot;UI9da8a45e84274bdf893d45d452f4e4d0&quot;:[{&quot;FieldId&quot;:&quot;&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;name&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;vendor-addr&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;phone&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;date&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;total&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;tax&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;biz-lic-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;currency&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;items&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;quantity&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;description&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;unit-price&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;line-amount&quot;,&quot;SubOptions&quot;:null}]}]}]}}">
+              <p1:DataExtractionScope ClassificationResult="{x:Null}" DisplayName="Data Extraction Scope" DocumentObjectModel="[du_dom]" DocumentPath="[file]" DocumentText="[du_text]" DocumentTypeId="lguplus.nw.receipt" ExtractionResult="[extraction_result]" FormatValuesIfPossible="True" sap:VirtualizedContainerService.HintSize="668,522" sap2010:WorkflowViewState.IdRef="DataExtractionScope_1" Taxonomy="[my_taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI9da8a45e84274bdf893d45d452f4e4d0&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;lguplus.nw.receipt&quot;:{&quot;FieldMappings&quot;:{&quot;lguplus.nw.receipt.name&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.name&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.vendor-addr&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.vendor-addr&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;vendor-addr\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.phone&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.phone&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;phone\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.total&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.total&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;total\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.tax&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.tax&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;tax\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.biz-lic-no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.biz-lic-no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;biz-lic-no\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.currency&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.currency&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;currency\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;items\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.items.description&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.items.description&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;description\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.items.quantity&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.items.quantity&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;quantity\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.items.unit-price&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.items.unit-price&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;unit-price\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.items.line-amount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.items.line-amount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;line-amount\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;}}}},&quot;ExtractorMinimumConfidence&quot;:{&quot;UI9da8a45e84274bdf893d45d452f4e4d0&quot;:&quot;0&quot;},&quot;ExtractorsAliases&quot;:{},&quot;DocumentTypeOptionsByExtractor&quot;:{&quot;UI9da8a45e84274bdf893d45d452f4e4d0&quot;:[{&quot;FieldId&quot;:&quot;&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;name&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;vendor-addr&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;phone&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;date&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;total&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;tax&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;biz-lic-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;currency&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;items&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;quantity&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;description&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;unit-price&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;line-amount&quot;,&quot;SubOptions&quot;:null}]}]}]}}">
                 <p1:DataExtractionScope.Extractors>
                   <p2:MachineLearningExtractor Endpoint="{x:Null}" ApiKey="[apikey]" Configuration="{}{&quot;Endpoint&quot;:&quot;&quot;,&quot;ApiKey&quot;:&quot;apikey&quot;,&quot;SelectedMLSkill&quot;:&quot;korean_receipt&quot;,&quot;AvailableMLSkills&quot;:[&quot;korean_receipt&quot;]}" DisplayName="Machine Learning Extractor" sap:VirtualizedContainerService.HintSize="234,195" sap2010:WorkflowViewState.IdRef="MachineLearningExtractor_1" PersistenceId="UI9da8a45e84274bdf893d45d452f4e4d0" RetryOnFailure="True" SelectedMLSkill="korean_receipt" Timeout="100000" UseServerSideOCR="False">
                     <p2:MachineLearningExtractor.AvailableMLSkills>
@@ -209,15 +244,15 @@
                   </p2:MachineLearningExtractor>
                 </p1:DataExtractionScope.Extractors>
               </p1:DataExtractionScope>
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="478,52" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="668,52" sap2010:WorkflowViewState.IdRef="CommentOut_3">
                 <ui:CommentOut.Body>
-                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="520,457" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="520,465" sap2010:WorkflowViewState.IdRef="Sequence_7">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <p:CreateDocumentValidationAction ActionCatalog="{x:Null}" TimeoutMs="{x:Null}" ActionOutput="[action_result]" ActionPriority="Medium" ActionTitle="NW Receipt" AutomaticExtractionResults="[extraction_result]" BucketFolderPath="receipts" BucketName="Labs" DisplayName="Create Document Validation Action" DocumentObjectModel="[du_dom]" DocumentPath="[file]" DocumentText="[du_text]" FolderPath="NW" sap:VirtualizedContainerService.HintSize="478,365" sap2010:WorkflowViewState.IdRef="CreateDocumentValidationAction_1" ShowOnlyRelevantPageRange="False" Taxonomy="[my_taxonomy]" />
+                    <p:CreateDocumentValidationAction ActionCatalog="{x:Null}" TimeoutMs="{x:Null}" ActionOutput="[action_result]" ActionPriority="Medium" ActionTitle="NW Receipt" AutomaticExtractionResults="[extraction_result]" BucketFolderPath="receipts" BucketName="Labs" DisplayName="Create Document Validation Action" DocumentObjectModel="[du_dom]" DocumentPath="[file]" DocumentText="[du_text]" FolderPath="NW" sap:VirtualizedContainerService.HintSize="478,373" sap2010:WorkflowViewState.IdRef="CreateDocumentValidationAction_1" ShowOnlyRelevantPageRange="False" Taxonomy="[my_taxonomy]" />
                   </Sequence>
                 </ui:CommentOut.Body>
                 <sap:WorkflowViewStateService.ViewState>
@@ -227,7 +262,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:CommentOut>
-              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478,162" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="668,162" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                 <ui:MultipleAssign.AssignOperations>
                   <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -258,15 +293,142 @@
                   </scg:List>
                 </ui:MultipleAssign.AssignOperations>
               </ui:MultipleAssign>
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="478,52" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+              <ui:MultipleAssign sap2010:Annotation.AnnotationText="일반 필드의 좌표 가져오기 &#xD;&#xA;박스 값을 전부 포함하는 큰 박스를 만들면 됨 " DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="668,175" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                <ui:MultipleAssign.AssignOperations>
+                  <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="p4:ResultsValue">[result_value]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="p4:ResultsValue">[extraction_result.ResultsDocument.Fields.Where( Function(p) p.FieldId = "lguplus.nw.receipt.name").First().Values(0)]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="p4:ResultsValueTokens">[tokens]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="p4:ResultsValueTokens">[extraction_result.ResultsDocument.Fields.Where( Function(p) p.FieldId = "lguplus.nw.receipt.name").First().Values(0).Reference.Tokens(0)]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                  </scg:List>
+                </ui:MultipleAssign.AssignOperations>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:MultipleAssign>
+              <ui:MultipleAssign sap2010:Annotation.AnnotationText="테이블필드에서 값을 가져오는 방법&#xD;&#xA;테이블 필드 이름이 items 임 &#xD;&#xA;" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="668,160" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+                <ui:MultipleAssign.AssignOperations>
+                  <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="scg:IEnumerable(p4:ResultsDataPoint)">[table_body_enums]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="scg:IEnumerable(p4:ResultsDataPoint)">[extraction_result.ResultsDocument.Fields.Where( Function(p) p.FieldId = "lguplus.nw.receipt.items")]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                  </scg:List>
+                </ui:MultipleAssign.AssignOperations>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:MultipleAssign>
+              <ui:ForEach x:TypeArguments="p4:ResultsValue" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="테이블에 대해서 2번째 항목이 Body가 되고 Body에 몇 개의 Row가 있는지 표시 됨 " DisplayName="For Each" sap:VirtualizedContainerService.HintSize="668,1216" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[table_body_enums(0).Values(0).Components(1).Values]">
+                <ui:ForEach.Body>
+                  <ActivityAction x:TypeArguments="p4:ResultsValue">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="p4:ResultsValue" Name="row" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="632,1060" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:ForEach x:TypeArguments="p4:ResultsDataPoint" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="각 row에 대해서 FieldName이  원하는 것에 대해서만 값을 가져와서 " DisplayName="For Each" sap:VirtualizedContainerService.HintSize="590,968" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[row.Components.Where( Function(p) p.FieldName = &quot;description&quot;)]">
+                        <ui:ForEach.Body>
+                          <ActivityAction x:TypeArguments="p4:ResultsDataPoint">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="p4:ResultsDataPoint" Name="field" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="554,812" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="512,93" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[string.Format(&quot;FieldName: {0}  =&gt; Value: {1}&quot;, field.FieldName, field.Values(0).Value)]" />
+                              <ui:ForEach x:TypeArguments="p4:ResultsValueTokens" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="좌표 정보가 있는 값으로 찾아가는 것음&#xD;&#xA;여러개의 인식 글자가 모여서 하나의 필드를 구성하기 때문에 여러개의 box가 있을 수 있음  " DisplayName="For Each" sap:VirtualizedContainerService.HintSize="512,587" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[field.Values(0).Reference.Tokens]">
+                                <ui:ForEach.Body>
+                                  <ActivityAction x:TypeArguments="p4:ResultsValueTokens">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="p4:ResultsValueTokens" Name="token" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="476,402" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:ForEach x:TypeArguments="p:Box" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="434,310" sap2010:WorkflowViewState.IdRef="ForEach`1_8" Values="[token.Boxes]">
+                                        <ui:ForEach.Body>
+                                          <ActivityAction x:TypeArguments="p:Box">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="p:Box" Name="box" />
+                                            </ActivityAction.Argument>
+                                            <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="376,185" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[string.Format(&quot;box pos ({0}, {1}),  width: {2}, height: {3}&quot;, box.Left, box.Top, box.Right-box.Left, box.Bottom-Box.Top)]" />
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </ui:ForEach.Body>
+                                      </ui:ForEach>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </ui:ForEach.Body>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:ForEach>
+                            </Sequence>
+                          </ActivityAction>
+                        </ui:ForEach.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:ForEach>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEach.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:ForEach>
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="668,52" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                 <ui:CommentOut.Body>
-                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,457" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,465" sap2010:WorkflowViewState.IdRef="Sequence_6">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <p:PresentValidationStation AutomaticExtractionResults="[extraction_result]" DisplayName="Present Validation Station" DocumentObjectModel="[du_dom]" DocumentPath="[file]" DocumentText="[du_text]" sap:VirtualizedContainerService.HintSize="334,365" sap2010:WorkflowViewState.IdRef="PresentValidationStation_1" ShowOnlyRelevantPageRange="False" Taxonomy="[my_taxonomy]" ValidatedExtractionResults="[validated_result]" />
+                    <p:PresentValidationStation AutomaticExtractionResults="[extraction_result]" DisplayName="Present Validation Station" DocumentObjectModel="[du_dom]" DocumentPath="[file]" DocumentText="[du_text]" sap:VirtualizedContainerService.HintSize="334,373" sap2010:WorkflowViewState.IdRef="PresentValidationStation_1" ShowOnlyRelevantPageRange="False" Taxonomy="[my_taxonomy]" ValidatedExtractionResults="[validated_result]" />
                   </Sequence>
                 </ui:CommentOut.Body>
                 <sap:WorkflowViewStateService.ViewState>
@@ -276,7 +438,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:CommentOut>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478,93" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[string.Format(&quot;StoreName : {0}  Total: {1}  Purchase date: {2}&quot;, name, total, receipt_date)]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="668,93" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[string.Format(&quot;StoreName : {0}  Total: {1}  Purchase date: {2}&quot;, name, total, receipt_date)]" />
             </Sequence>
           </ActivityAction>
         </ui:ForEach.Body>
