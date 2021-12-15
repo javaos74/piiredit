@@ -1,0 +1,262 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1067,3060" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p2="http://schemas.uipath.com/workflow/activities/documentunderstanding-ml" xmlns:p3="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:p4="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p5="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p6="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiaam="clr-namespace:UiPath.IntelligentOCR.Activities.Actions.Model;assembly=UiPath.IntelligentOCR.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="46">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Taxonomy</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.TaxonomyManagement</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Dom</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Digitization</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>ClovaOCRActivities.Basic.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Vision.Core.OCR</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Results</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.DataExtraction</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.DataExtraction</x:String>
+      <x:String>UiPath.DocumentUnderstanding.ML.Activities</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts</x:String>
+      <x:String>UiPath.DocumentUnderstanding.ML.Activities.Editors</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.ValidationStation</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Actions.Model</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="29">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices.RuntimeInformation</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentProcessing.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>ClovaOCRActivities</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="640,2995" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="p6:DocumentTaxonomy" Name="my_taxonomy" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <p:LoadTaxonomy DisplayName="Load Taxonomy" sap:VirtualizedContainerService.HintSize="598,105" sap2010:WorkflowViewState.IdRef="LoadTaxonomy_1" Taxonomy="[my_taxonomy]" />
+    <Sequence DisplayName="For Each File in Folder" sap:VirtualizedContainerService.HintSize="598,2758" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="selectFolder" />
+        <Variable x:TypeArguments="s:String[]" Name="files" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="556,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Choose korean receipts folder&quot;]" />
+      <ui:SelectFolder DisplayName="Select folder" sap:VirtualizedContainerService.HintSize="556,79" sap2010:WorkflowViewState.IdRef="SelectFolder_1" SelectedFolder="[selectFolder]" />
+      <Assign sap:VirtualizedContainerService.HintSize="556,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="s:String[]">[files]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles(selectFolder)]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For each file" sap:VirtualizedContainerService.HintSize="556,2322" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[files]">
+        <ui:ForEach.Body>
+          <ActivityAction x:TypeArguments="x:String">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:String" Name="file" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="520,2197" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="du_text" />
+                <Variable x:TypeArguments="p5:Document" Name="du_dom" />
+                <Variable x:TypeArguments="x:String" Name="apikey">
+                  <Variable.Default>
+                    <Literal x:TypeArguments="x:String">JB1Ou9qoXzuQLcY1qzIHIdAKY/038Ftia84Yc/peThl5LuYMkY88Wf0tCDr2uDfn0mevWbV6H390wyspczYi5Q==</Literal>
+                  </Variable.Default>
+                </Variable>
+                <Variable x:TypeArguments="p4:ExtractionResult" Name="extraction_result" />
+                <Variable x:TypeArguments="x:String" Name="name" />
+                <Variable x:TypeArguments="x:Int32" Name="total" />
+                <Variable x:TypeArguments="x:String" Name="receipt_date" />
+                <Variable x:TypeArguments="p4:ExtractionResult" Name="validated_result" />
+                <Variable x:TypeArguments="uiaam:DocumentValidationActionData" Name="action_result" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <p:DigitizeDocument DegreeOfParallelism="-1" DisplayName="Digitize Document" DocumentObjectModel="[du_dom]" DocumentPath="[file]" DocumentText="[du_text]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="478,298" sap2010:WorkflowViewState.IdRef="DigitizeDocument_1">
+                <p:DigitizeDocument.OCREngine>
+                  <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                    <ActivityFunc.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                    </ActivityFunc.Argument>
+                    <ui:GoogleCloudOCR FilterRegion="{x:Null}" Language="{x:Null}" Output="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" Text="{x:Null}" ApiKey="AIzaSyAabCimm0BJ1zRp_KN7DIpmCqTt3WAjCCY" ComputeSkewAngle="False" DetectionMode="TextDetection" DisplayName="Google Cloud Vision OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="312,22" sap2010:WorkflowViewState.IdRef="GoogleCloudOCR_1" Image="[Image]" ResizeToApiLimits="False" />
+                  </ActivityFunc>
+                </p:DigitizeDocument.OCREngine>
+              </p:DigitizeDocument>
+              <p1:DataExtractionScope ClassificationResult="{x:Null}" DisplayName="Data Extraction Scope" DocumentObjectModel="[du_dom]" DocumentPath="[file]" DocumentText="[du_text]" DocumentTypeId="lguplus.nw.receipt" ExtractionResult="[extraction_result]" FormatValuesIfPossible="True" sap:VirtualizedContainerService.HintSize="478,522" sap2010:WorkflowViewState.IdRef="DataExtractionScope_1" Taxonomy="[my_taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI9da8a45e84274bdf893d45d452f4e4d0&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;lguplus.nw.receipt&quot;:{&quot;FieldMappings&quot;:{&quot;lguplus.nw.receipt.name&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.name&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.vendor-addr&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.vendor-addr&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;vendor-addr\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.phone&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.phone&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;phone\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.total&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.total&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;total\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.tax&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.tax&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;tax\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.biz-lic-no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.biz-lic-no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;biz-lic-no\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.currency&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.currency&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;currency\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;items\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.items.description&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.items.description&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;description\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.items.quantity&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.items.quantity&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;quantity\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.items.unit-price&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.items.unit-price&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;unit-price\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;lguplus.nw.receipt.items.line-amount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;lguplus.nw.receipt.items.line-amount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;line-amount\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;}}}},&quot;ExtractorMinimumConfidence&quot;:{&quot;UI9da8a45e84274bdf893d45d452f4e4d0&quot;:&quot;0&quot;},&quot;ExtractorsAliases&quot;:{},&quot;DocumentTypeOptionsByExtractor&quot;:{&quot;UI9da8a45e84274bdf893d45d452f4e4d0&quot;:[{&quot;FieldId&quot;:&quot;&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;name&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;vendor-addr&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;phone&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;date&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;total&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;tax&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;biz-lic-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;currency&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;items&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;quantity&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;description&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;unit-price&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;line-amount&quot;,&quot;SubOptions&quot;:null}]}]}]}}">
+                <p1:DataExtractionScope.Extractors>
+                  <p2:MachineLearningExtractor Endpoint="{x:Null}" ApiKey="[apikey]" Configuration="{}{&quot;Endpoint&quot;:&quot;&quot;,&quot;ApiKey&quot;:&quot;apikey&quot;,&quot;SelectedMLSkill&quot;:&quot;korean_receipt&quot;,&quot;AvailableMLSkills&quot;:[&quot;korean_receipt&quot;]}" DisplayName="Machine Learning Extractor" sap:VirtualizedContainerService.HintSize="234,195" sap2010:WorkflowViewState.IdRef="MachineLearningExtractor_1" PersistenceId="UI9da8a45e84274bdf893d45d452f4e4d0" RetryOnFailure="True" SelectedMLSkill="korean_receipt" Timeout="100000" UseServerSideOCR="False">
+                    <p2:MachineLearningExtractor.AvailableMLSkills>
+                      <sc:BindingList x:TypeArguments="x:String" AllowEdit="True" AllowNew="False" AllowRemove="True" RaiseListChangedEvents="True">
+                        <x:String>korean_receipt</x:String>
+                      </sc:BindingList>
+                    </p2:MachineLearningExtractor.AvailableMLSkills>
+                    <p2:MachineLearningExtractor.DocumentBounds>
+                      <InArgument x:TypeArguments="p4:ResultsDocumentBounds">
+                        <DelegateArgumentValue x:TypeArguments="p4:ResultsDocumentBounds">
+                          <DelegateInArgument x:TypeArguments="p4:ResultsDocumentBounds" Name="DocumentBounds" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p2:MachineLearningExtractor.DocumentBounds>
+                    <p2:MachineLearningExtractor.DocumentObjectModel>
+                      <InArgument x:TypeArguments="p5:Document">
+                        <DelegateArgumentValue x:TypeArguments="p5:Document">
+                          <DelegateInArgument x:TypeArguments="p5:Document" Name="DocumentObjectModel" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p2:MachineLearningExtractor.DocumentObjectModel>
+                    <p2:MachineLearningExtractor.DocumentPath>
+                      <InArgument x:TypeArguments="x:String">
+                        <DelegateArgumentValue x:TypeArguments="x:String">
+                          <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p2:MachineLearningExtractor.DocumentPath>
+                    <p2:MachineLearningExtractor.DocumentText>
+                      <InArgument x:TypeArguments="x:String">
+                        <DelegateArgumentValue x:TypeArguments="x:String">
+                          <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p2:MachineLearningExtractor.DocumentText>
+                    <p2:MachineLearningExtractor.ExtractorDocumentType>
+                      <InArgument x:TypeArguments="p3:ExtractorDocumentType">
+                        <DelegateArgumentValue x:TypeArguments="p3:ExtractorDocumentType">
+                          <DelegateInArgument x:TypeArguments="p3:ExtractorDocumentType" Name="ExtractorDocumentType" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p2:MachineLearningExtractor.ExtractorDocumentType>
+                    <p2:MachineLearningExtractor.ExtractorResult>
+                      <OutArgument x:TypeArguments="p3:ExtractorResult">
+                        <DelegateArgumentReference x:TypeArguments="p3:ExtractorResult">
+                          <DelegateOutArgument x:TypeArguments="p3:ExtractorResult" Name="ExtractorResult" />
+                        </DelegateArgumentReference>
+                      </OutArgument>
+                    </p2:MachineLearningExtractor.ExtractorResult>
+                  </p2:MachineLearningExtractor>
+                </p1:DataExtractionScope.Extractors>
+              </p1:DataExtractionScope>
+              <p:CreateDocumentValidationAction ActionCatalog="{x:Null}" TimeoutMs="{x:Null}" ActionOutput="[action_result]" ActionPriority="Medium" ActionTitle="NW Receipt" AutomaticExtractionResults="[extraction_result]" BucketFolderPath="receipts" BucketName="Labs" DisplayName="Create Document Validation Action" DocumentObjectModel="[du_dom]" DocumentPath="[file]" DocumentText="[du_text]" FolderPath="NW" sap:VirtualizedContainerService.HintSize="478,373" sap2010:WorkflowViewState.IdRef="CreateDocumentValidationAction_1" ShowOnlyRelevantPageRange="False" Taxonomy="[my_taxonomy]" />
+              <p:WaitForDocumentValidationActionAndResume ActionOutput="{x:Null}" DownloadFolderPath="{x:Null}" StatusMessage="{x:Null}" TimeoutMs="{x:Null}" WaitItemDataObject="{x:Null}" ActionInput="[action_result]" AutomaticExtractionResults="[extraction_result]" DisplayName="Wait For Document Validation Action And Resume" DocumentObjectModel="[du_dom]" DocumentPath="[file]" DocumentText="[du_text]" sap:VirtualizedContainerService.HintSize="478,365" sap2010:WorkflowViewState.IdRef="WaitForDocumentValidationActionAndResume_1" RemoveDataFromStorage="False" Taxonomy="[my_taxonomy]" ValidatedExtractionResults="[validated_result]" />
+              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478,162" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                <ui:MultipleAssign.AssignOperations>
+                  <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[name]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[extraction_result.GetSimpleFieldValues("lguplus.nw.receipt.name")(0).DerivedValue]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:Int32">[total]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32( extraction_result.GetSimpleFieldValues("lguplus.nw.receipt.total")(0).DerivedValue)]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[receipt_date]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[extraction_result.GetSimpleFieldValues("lguplus.nw.receipt.date")(0).DerivedValue]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                  </scg:List>
+                </ui:MultipleAssign.AssignOperations>
+              </ui:MultipleAssign>
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="478,52" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,465" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <p:PresentValidationStation AutomaticExtractionResults="[extraction_result]" DisplayName="Present Validation Station" DocumentObjectModel="[du_dom]" DocumentPath="[file]" DocumentText="[du_text]" sap:VirtualizedContainerService.HintSize="334,373" sap2010:WorkflowViewState.IdRef="PresentValidationStation_1" ShowOnlyRelevantPageRange="False" Taxonomy="[my_taxonomy]" ValidatedExtractionResults="[validated_result]" />
+                  </Sequence>
+                </ui:CommentOut.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:CommentOut>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478,93" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[string.Format(&quot;StoreName : {0}  Total: {1}  Purchase date: {2}&quot;, name, total, receipt_date)]" />
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEach.Body>
+      </ui:ForEach>
+    </Sequence>
+  </Sequence>
+</Activity>
