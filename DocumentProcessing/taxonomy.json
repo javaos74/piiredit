@@ -225,6 +225,108 @@
           ]
         }
       ]
+    },
+    {
+      "DocumentTypeId": "koreanair.mileage.family",
+      "Group": "koreanair",
+      "Category": "mileage",
+      "Name": "family",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "koreanair.mileage.family.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "koreanair.mileage.family.issue-date",
+          "FieldName": "issue-date",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ]
+        },
+        {
+          "FieldId": "koreanair.mileage.family.items",
+          "FieldName": "items",
+          "IsMultiValue": false,
+          "Type": "Table",
+          "DeriveFieldsFormat": "",
+          "Components": [
+            {
+              "FieldId": "koreanair.mileage.family.items.relationship",
+              "FieldName": "relationship",
+              "IsMultiValue": false,
+              "Type": "Text",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": [],
+              "Metadata": []
+            },
+            {
+              "FieldId": "koreanair.mileage.family.items.name",
+              "FieldName": "name",
+              "IsMultiValue": false,
+              "Type": "Text",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": [],
+              "Metadata": []
+            },
+            {
+              "FieldId": "koreanair.mileage.family.items.birth-date",
+              "FieldName": "birth-date",
+              "IsMultiValue": false,
+              "Type": "Text",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": [],
+              "Metadata": []
+            },
+            {
+              "FieldId": "koreanair.mileage.family.items.reg-no",
+              "FieldName": "reg-no",
+              "IsMultiValue": false,
+              "Type": "Text",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": [],
+              "Metadata": []
+            },
+            {
+              "FieldId": "koreanair.mileage.family.items.sex",
+              "FieldName": "sex",
+              "IsMultiValue": false,
+              "Type": "Text",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": [],
+              "Metadata": []
+            }
+          ],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "m"
+            }
+          ]
+        }
+      ]
     }
   ],
   "Groups": [
@@ -232,6 +334,12 @@
       "Name": "lguplus",
       "Categories": [
         "nw"
+      ]
+    },
+    {
+      "Name": "koreanair",
+      "Categories": [
+        "mileage"
       ]
     }
   ],
