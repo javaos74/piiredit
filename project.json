@@ -1,6 +1,6 @@
 {
-  "name": "PIIRedit",
-  "description": "DU Redit 예제 ",
+  "name": "DURedaction",
+  "description": "DU Redaction 예제 ",
   "main": "Main.xaml",
   "dependencies": {
     "AForge": "[2.2.5]",

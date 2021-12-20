@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1881,5296" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p2="http://schemas.uipath.com/workflow/activities/documentunderstanding-ml" xmlns:p3="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p4="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p5="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:p6="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiaam="clr-namespace:UiPath.IntelligentOCR.Activities.Actions.Model;assembly=UiPath.IntelligentOCR.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="792,5495" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p2="http://schemas.uipath.com/workflow/activities/documentunderstanding-ml" xmlns:p3="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p4="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p5="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:p6="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiaam="clr-namespace:UiPath.IntelligentOCR.Activities.Actions.Model;assembly=UiPath.IntelligentOCR.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="56">
       <x:String>System.Activities</x:String>
@@ -104,7 +104,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="DU에서 필드를 찾았을때 해당 필드의 자표를 구하는 방법입니다. &#xA;&#xA;구글OCR엔진 키와 Cloud DU Key는 별도로 구성해야 합니다. &#xA;&#xA;테이블 필드의 경우 추출하는 내용을 주석을 추가했으니 확인해보세요.&#xA;" sap:VirtualizedContainerService.HintSize="802,5231" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence sap2010:Annotation.AnnotationText="DU에서 필드를 찾았을때 해당 필드의 자표를 구하는 방법입니다. &#xA;&#xA;구글OCR엔진 키와 Cloud DU Key는 별도로 구성해야 합니다. &#xA;&#xA;테이블 필드의 경우 추출하는 내용을 주석을 추가했으니 확인해보세요.&#xA;&#xA;샘플 파일은 data 폴더에 넣어주세요. &#xA;결과 파일은 result 폴더에 만들어질겁니다. &#xA;" sap:VirtualizedContainerService.HintSize="802,5430" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
       <Variable x:TypeArguments="p6:DocumentTaxonomy" Name="my_taxonomy" />
       <Variable x:TypeArguments="njl:JObject" Name="config" />
@@ -117,7 +117,7 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="760,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[config]" JsonString="[File.ReadAllText( Path.Combine(&quot;config&quot;, &quot;config.json&quot;))]" />
     <p:LoadTaxonomy DisplayName="Load Taxonomy" sap:VirtualizedContainerService.HintSize="760,105" sap2010:WorkflowViewState.IdRef="LoadTaxonomy_1" Taxonomy="[my_taxonomy]" />
-    <Sequence DisplayName="For Each File in Folder" sap:VirtualizedContainerService.HintSize="760,4786" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="For Each File in Folder" sap:VirtualizedContainerService.HintSize="760,4937" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="selectFolder" />
         <Variable x:TypeArguments="s:String[]" Name="files" />
@@ -140,6 +140,13 @@
           </Sequence>
         </ui:CommentOut.Body>
       </ui:CommentOut>
+      <ui:CreateDirectory sap2010:Annotation.AnnotationText="결과 폴더는 result (없으면 만들어 줌)" ContinueOnError="True" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="718,111" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[Path.Combine( Environment.CurrentDirectory, &quot;result&quot;)]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:CreateDirectory>
       <Assign sap2010:Annotation.AnnotationText="프로젝트 내부의 data 폴더 참조하도록 지정 " sap:VirtualizedContainerService.HintSize="718,104" sap2010:WorkflowViewState.IdRef="Assign_2">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[selectFolder]</OutArgument>
